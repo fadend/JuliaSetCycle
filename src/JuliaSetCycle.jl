@@ -27,7 +27,7 @@ function make_julia_set_cycle_animation(
     matrix = julia_set.(x, y', c; max_iter = max_iter)
     fig, ax, hm = heatmap(x, y, matrix)
     record(fig, path, 1:num_frames) do i
-        angle = 2pi * (i - 1) / N
+        angle = 2pi * (i - 1) / num_frames
         hm[3] = julia_set.(x, y', c * (cos(angle) + im * sin(angle)))
     end
 end
