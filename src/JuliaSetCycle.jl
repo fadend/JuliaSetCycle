@@ -18,9 +18,9 @@ end
 function make_julia_set_cycle_animation(
     path::AbstractString;
     c::Complex = -0.7269 + 0.1889im,
-    width::Int64 = 500,
-    max_iter::Int64 = 100,
-    num_frames::Int64 = 100,
+    width::Integer = 500,
+    max_iter::Integer = 100,
+    num_frames::Integer = 100,
 )
     x = LinRange(-2, 2, width)
     y = LinRange(-2, 2, width)
